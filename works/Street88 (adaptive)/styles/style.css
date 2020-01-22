@@ -1,0 +1,335 @@
+@import 'fonts.css';
+
+/* =============================== ROOT SETTINGS start ================================== */
+:root{
+   --f100: 'Raleway Thin';
+   --f300: 'Raleway Light';
+   --f400: 'Raleway Regular';
+   --f700: 'Raleway Bold';
+   --f900: 'Raleway Black';
+   --fR700: 'Roboto Bold';
+   
+   --white: #fff;
+   --black: black;
+   --green-logo: #4e9f0d;
+   --green-border:#62be19;
+   --green:#62be17;
+   --green-75:rgba(106, 207, 23, 0.75);
+   --green-90:rgba(106, 207, 23, 0.9);
+   --grey:#7a7a7a;
+   --grey-light:#dedede;
+   
+   --col-1:calc(100%/12);
+   --col-2:calc(100%/12*2);
+   --col-3:calc(100%/12*3);
+   --col-4:calc(100%/12*4);
+   --col-5:calc(100%/12*5);
+   --col-6:calc(100%/12*6);
+   --col-7:calc(100%/12*7);
+   --col-8:calc(100%/12*8);
+   --col-9:calc(100%/12*9);
+   --col-10:calc(100%/12*10);
+   --col-11:calc(100%/12*11);
+   --col-12:calc(100%/12*12);
+}
+*{
+   margin: 0;
+   padding: 0;
+   list-style: none;
+   text-decoration: none;
+   box-sizing: border-box;
+}
+.container{
+   width: 100%;
+   max-width: 1140px;
+   margin: 0 auto;
+   padding: 0 15px;
+}
+.row{
+   display: flex;
+   flex-wrap: wrap;
+   margin: 0 -15px 0 -15px;
+}
+.justify-content-center{
+   justify-content: center;
+}
+.justify-content-between{
+   justify-content: space-between;
+}
+.justify-content-start{
+   justify-content: flex-start;
+}
+.align-items-center{
+   align-items: center;
+}
+.align-items-start{
+   align-items: flex-start;
+}
+.d-flex{
+   display: flex;
+   flex-wrap: wrap;
+}
+.flex-column{
+   flex-direction: column;
+}
+.col-4{
+   width: var(--col-4);
+   padding: 0 15px;
+}
+.col-12{
+   width: var(--col-12);
+   padding: 0 15px;
+}
+body{
+   background: var(--black);
+}
+img{
+   width: 100%;
+}
+/* =============================== ROOT SETTINGS end ================================== */
+/* =============================== HEADER start ================================== */
+header{
+   background: url(../images/bg_img.jpg)no-repeat center /cover;
+}
+.logo{
+   font-family: var(--f700);
+   font-size: 24px;
+   color: var(--white);
+   background: var(--green-logo);
+   border: 3px solid var(--green-border);
+   border-radius: 5px;
+   box-shadow: 0 0 5px rgba(30, 30, 30, 0.15);
+   text-transform: uppercase;
+   padding: 8px 18px 7px 18px;
+   display: block;
+}
+nav ul li a{
+   color: var(--green);
+   font-family: var(--f300);
+   font-size: 20px;
+   padding: 41px 26px 34px 26px;
+   display: block;
+}
+.gutters{
+   padding: 37px 11px 29px 10px;
+}
+nav ul li a:hover{
+   background: var(--green-75);
+   color: var(--white);
+}
+.gutters span{
+   display: inline-block;
+   width: 24px;
+   height: 24px;
+   border-radius: 50%;
+   background: var(--white);
+   color: var(--green);
+   text-align: center;
+   font-family: var(--f300);
+   font-size: 20px;
+}
+.header-content{
+   padding: 150px 0;
+}
+.header-content h1{
+   font-family: var(--f900);
+   font-size: 72px;
+   color: var(--green);
+   text-transform: uppercase;
+}
+.underh1{
+   font-family: var(--f400);
+   font-size: 36px;
+   color: var(--green);
+   margin-bottom: 30px;
+}
+.header-description{
+   font-family: var(--f400);
+   font-size: 18px;
+   color: var(--grey-light);
+   margin-bottom: 75px;
+}
+.header-content span{
+   font-family: var(--f100);
+   font-size: 60px;
+   color: var(--white);
+   padding: 28px 90px;
+   background: var(--green-75);
+
+}
+/* =============================== HEADER end ================================== */
+/* =============================== MAIN start ================================== */
+main{
+   padding: 50px 0;
+}
+.main-ul{
+   margin-bottom: 69px;
+}
+.main-ul-link{
+   color: var(--grey);
+   font-family: var(--f700);
+   font-size: 20px;
+   margin-right: 24px;
+}
+.main-ul-link:hover,.active{
+   color: var(--green);
+}
+.img-price{
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   padding: 21px 58px 20px 58px;
+   background: var(--green-75);
+   font-family: var(--f400);
+   font-size: 24px;
+   color: var(--grey-light);
+}
+.main-img{
+   position: relative;
+   display: flex;
+}
+.link-hover{
+   position: absolute;
+   left: 0;
+   right: 0;
+   top: 0;
+   bottom: 0;
+   background: var(--green-90);
+   color: var(--white);
+   display: none;
+   justify-content: center;
+   align-items: center;
+   font-family: var(--f700);
+   font-size: 24px;
+}
+.main-img:hover .link-hover{
+   display: flex;
+}
+.main-img:hover .img-price{
+   display: none;
+}
+.menu section h4{
+   color: green;
+   font-family: var(--f700);
+   font-size: 24px;
+   text-transform: uppercase;
+   margin-top: 31px;
+   margin-bottom: 14px;
+}
+.menu section p{
+   color: var(--grey);
+   font-family: var(--f400);
+   font-size: 16px;
+   line-height: 24px;
+}
+.menu section{
+   margin-bottom: 50px;
+}
+/* =============================== MAIN end ================================== */
+/* =============================== ARTICLE start ================================== */
+article{
+   background: url(../images/section_bg.jpg)no-repeat center center /cover;
+   padding: 50px 0 100px;
+}
+article h2{
+   color: var(--green);
+   font-family: var(--f700);
+   font-size: 36px;
+   text-align: center;
+   text-transform: uppercase;
+}
+article h2::after{
+   content: '';
+   display: block;
+   height: 1px;
+   width: 200px;
+   background: var(--green);
+   margin: 20px auto 50px auto;
+}
+article p{
+   color: var(--grey-light);
+   font-family: var(--f400);
+   font-size: 18px;
+   line-height: 24px;
+}
+article .container p:nth-child(2){
+   margin-bottom: 31px;
+}
+/* =============================== ARTICLE end ================================== */
+/* =============================== MAP start ================================== */
+.map h2{
+   padding: 48px 0 56px;
+   background: var(--white);
+   color: var(--green);
+   font-family: var(--f700);
+   font-size: 36px;
+   text-align: center;
+   text-transform: uppercase;
+}
+/* =============================== MAP end ================================== */
+/* =============================== FOOTER start ================================== */
+footer{
+   padding: 40px 0 50px;
+}
+.tel{
+   color: var(--green);
+   font-family: var(--fR700);
+   font-size: 24px;
+   margin-bottom: 50px;
+}
+.footer-nav a{
+   font-family: var(--f100);
+   color: var(--grey-light);
+   font-size: 18px;
+   margin-left: 52px;
+}
+footer p{
+   margin-top: 40px;
+   font-family: var(--f100);
+   color: var(--grey-light);
+   font-size: 16px;
+   text-align: center;
+}
+/* =============================== FOOTER end ================================== */
+/* ============================= MEDIA start ============================== */
+
+@media(max-width:576px){
+   header nav{
+      justify-content: center !important;
+   }
+   .col-sm-12{
+      width: var(--col-12);
+   }
+   .header-content h1{
+      font-size: 50px;
+   }
+   header ul{
+      justify-content: center !important;
+   }
+   .header-content span{
+      padding: 18px 60px;
+      font-size: 40px;
+   }
+   .justify-sm-center{
+      justify-content: center;
+   }
+   .tel{
+      margin-bottom: 0;
+   }
+   .footer-top{
+      margin-bottom: 40px;
+   }
+   .footer-nav li a{
+      margin-left: 0;
+      margin: 0 5px;
+   }
+   .justify-sm-around{
+      justify-content: space-around;
+   }
+}
+@media(max-width:400px){
+   .footer-top{
+      flex-direction: column;
+   }
+}
+/* ============================= MEDIA end ============================== */

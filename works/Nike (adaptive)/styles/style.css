@@ -1,0 +1,233 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+header{
+   background: url(../images/header_bg_image.jpg)no-repeat center center /cover;
+   height: 660px;
+}
+.container{
+   max-width: 1110px;
+   width: 100%;
+   margin: 0 auto;
+}
+header nav .container{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   align-items: center;
+}
+header nav .container ul{
+   display: flex;
+   flex-wrap: wrap;
+   list-style: none;
+}
+header ul a{
+   display: block;
+   padding: 22px 24px 21px 28px;
+   text-decoration: none;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 18px;
+   color: #4d4d4d;
+}
+header ul a:hover{
+   background: #515151;
+   color: #f7f7f7;
+}
+.logo{
+   color: #cb0a15;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 20px;
+   text-decoration: none;
+}
+.header-content h1{
+   color: #cb0a15;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 40px;
+   text-align: center;
+   margin-bottom: 45px;
+}
+.header-content p{
+   color: #4d4d4d;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 18px;
+   text-align: center;
+}
+.header-content p span{
+   font-weight: bold;
+   font-size: 20px;
+   color: black;
+}
+.header-content{
+   display: flex;
+   height: 100%;
+   flex-direction: column;
+   justify-content: center;
+}
+
+main{
+   padding: 100px 0;
+}
+main .container{
+   display: flex;
+   justify-content: space-between;
+}
+.left{
+   max-width: 539px;
+   width: 100%;
+}
+.right{
+   max-width: 532px;
+   width: 100%;
+}
+.item{
+   display: flex;
+   margin-bottom: 30px;
+}
+.item img{
+   margin-right: 30px;
+}
+.left h3{
+   margin-top: 60px;
+   margin-bottom: 35px;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 20px;
+}
+.left h3 span{
+   font-size: 25px;
+   color: #2c2c2c;
+}
+.left p{
+   color: #919191;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 16px;
+}
+.right .item .item-text h3{
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 20px;
+   margin: 13px 0 26px 0;
+}
+.item-text p{
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 16px;
+   color: #919191;
+}
+footer .container{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   padding: 50px 0 47px 0;
+}
+footer{
+   background: #f9f9f9;
+}
+.footer-item h4{ 
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 20px;
+   margin-bottom: 22px;
+}
+.footer-item h4 span{
+   color: #cb0a15;
+}
+.footer-item ul{
+   list-style: none;
+}
+.footer-item ul li a{
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 16px;
+   color: #818181;
+}
+.footer-item ul li a:hover{
+   color: #cb0a15;
+}
+/* ============================= MEDIA start ============================== */
+@media(max-width:951px){
+   header nav .container{
+      justify-content: center;
+   }
+   main .container{
+      flex-direction: column;
+      align-items: center;
+   }
+   main .left{
+      margin-bottom: 50px;
+   }
+   footer .container{
+      justify-content: space-evenly;
+   }
+   header nav ul{
+      justify-content: center;
+   }
+}
+@media(max-width:635px){
+   .footer-item{
+      width: 50%;
+      text-align: center;
+      margin-bottom: 30px;
+   }
+   img{
+      width: 100%;
+   }
+}
+@media(max-width:450px){
+   .item{
+      flex-direction: column;
+   }
+   .container{
+      padding: 0 15px;
+   }
+   header nav{
+      display: none;
+   }
+   .burger-menu span{
+      display: block;
+      width: 25px;
+      height: 2px;
+      border-radius: 25px;
+      background: grey;
+      margin: 5px 0;
+   }
+   .burger-menu span::before{
+      content: '';
+      display: block;
+      width: 25px;
+      height: 2px;
+      border-radius: 25px;
+      background: grey;
+      position: absolute;
+      top: 100%;
+   }
+   .burger-menu span::after{
+      content: '';
+      display: block;
+      width: 25px;
+      height: 2px;
+      border-radius: 25px;
+      background: grey;
+      position: absolute;
+      bottom: 100%;
+   }
+   .burger-menu{
+      width: 25px;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+      z-index: 2;
+   }
+   header{
+      position: relative;
+   }
+}
+/* ============================= MEDIA end ============================== */
